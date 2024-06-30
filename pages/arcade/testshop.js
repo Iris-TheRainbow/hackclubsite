@@ -80,13 +80,10 @@ export async function getStaticProps( ) {
         'Max Order Quantity': '-1' || 1,
         Stock: '-999' || null
       }))
-      props.availableItems = availableItems
+      props.availableItems = item
     }),
-    getArcadeUser('').then(user => {
-      const hoursBalance = '999'
-      props.hoursBalance = hoursBalance
-    })
+    props.hoursBalance = 9999
   ])
   
-  return { props, revalidate: 10 }
+  return { props }
 }

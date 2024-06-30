@@ -12,5 +12,5 @@ export default async function handler(req, res) {
     }
   })
 
-  res.json(filteredData)
+  return res.json(filteredData)
 }

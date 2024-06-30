@@ -98,7 +98,10 @@ export default function ShopComponent({
               id={item.id}
               onQuantityChange={(id, q) => handleQuantityChange(item.id, q)} // Pass handler to update quantity
               hoursBalance={hoursBalance}
+<<<<<<< HEAD
               stock={item['Stock']}
+=======
+>>>>>>> parent of 860b59f8 (added stock ui)
             />
           ))}
       </Grid>

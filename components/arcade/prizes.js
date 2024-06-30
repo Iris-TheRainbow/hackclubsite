@@ -18,8 +18,12 @@ const Prizes = ({
   quantity,
   onQuantityChange,
   index,
+<<<<<<< HEAD
   hoursBalance = null,
   stock,
+=======
+  hoursBalance,
+>>>>>>> parent of 860b59f8 (added stock ui)
   ...props
 }) => {
   const parsedFulfillmentDesc = fulfillmentDescription?.replace(
@@ -50,6 +54,7 @@ const Prizes = ({
       }}
       {...props}
     >
+<<<<<<< HEAD
       <Flex sx={{ flexDirection: 'column' }}>
         <Flex
           sx={{
@@ -83,6 +88,35 @@ const Prizes = ({
             Only {stock} left!
           </Text>
         )}
+=======
+      <Flex sx={{flexDirection: 'column'}}>
+        
+      <Flex
+        sx={{
+          background: '#FFEEC6',
+          height: '250px',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <img
+          src={img}
+          sx={{ height: 'auto', maxWidth: '280px', maxHeight: '250px' }}
+          alt={text}
+        />
+      </Flex>
+      <Text
+        className="slackey"
+        variant="headline"
+        sx={{ color: '#FFEEC6', mb: 0 }}
+      >
+        {name}
+      </Text>
+      <Text variant="subtitle" sx={{ color: '#FFEEC6' }}>
+        {smallName}
+      </Text>
+      <Balancer>
+>>>>>>> parent of 860b59f8 (added stock ui)
         <Text
           className="slackey"
           variant="headline"
