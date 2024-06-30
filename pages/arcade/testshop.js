@@ -1,6 +1,6 @@
 import ShopComponent from "../../components/arcade/shop-component"
 import { getArcadeUser } from "../api/arcade/[userAirtableID]"
-import { shopParts } from "../api/arcade/shop"
+import { shopParts } from "../api/arcade/testshop"
 import { Image, Link, Text } from 'theme-ui'
 import { Balancer } from "react-wrap-balancer"
 import Meta from '@hackclub/meta'
