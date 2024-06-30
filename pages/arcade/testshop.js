@@ -25,7 +25,7 @@ body {
 
 `
 
-export default function Shop({ availableItems, userAirtableID = null, hoursBalance = 0 }) {
+export default function Shop({ availableItems, hoursBalance = 99999 }) {
   
   return (
     <>
@@ -59,7 +59,7 @@ export default function Shop({ availableItems, userAirtableID = null, hoursBalan
         </h1>
       </Balancer>
       <Text sx={{ display: 'block', textAlign: 'center', color: '#35290F' }} className='gaegu' variant='subtitle' >Your current balance is {Math.floor(hoursBalance)} 🎟️</Text>
-      <ShopComponent availableItems={availableItems} userAirtableID={userAirtableID} hoursBalance={hoursBalance} />
+      <ShopComponent availableItems={availableItems} hoursBalance={ 9998 }/>
     </>
   )
 }
@@ -68,7 +68,7 @@ export async function getStaticProps( ) {
   const props = ''
   await Promise.all([
     shopParts().then(items => {
-      const availableItems = items.filter(item => item['Enabled']).map(item => ({
+      const availableItems = items.filter(item => item['Enabled']).map(({
         'Name': 'testitem' || null,
         'Small Name': 'test' || null,
         'Full Name': 'testingitem' || null,
@@ -82,10 +82,7 @@ export async function getStaticProps( ) {
       }))
       props.availableItems = availableItems
     }),
-    getArcadeUser('').then(user => {
-      const hoursBalance = '999'
-      props.hoursBalance = hoursBalance
-    })
+    props.hoursBalance = '99999'
   ])
   
   return { props, revalidate: 10 }
